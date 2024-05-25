@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .father {
+      width: 500px;
+      height: 500px;
+      background-color: red;
+
+      /* 1. 给父元素加"盖子" */
+      /* border-top: 5px solid blue; */
+      /* padding-top: 5px; */
+
+      /* 2. 给父元素设置overflow属性 */
+      /* 优先建议使用 */
+      overflow: hidden;
+
+      /* 拓展: 在浮动,定位和弹性布局中,margin是没有塌陷问题的 */
+    }
+    .son {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+
+      /* 给子元素设置顶部的margin */
+      margin-top: 100px;
+    }
+
+    /* margin的塌陷问题: 父子关系的盒子,给子元素添加margin-top,
+    会把父元素带跑(内部margin溢出) */
+  </style>
+</head>
+<body>
+  <!-- 只有嵌套的盒子才会发生margin塌陷 -->
+  <div class="father">
+    <div class="son"></div>
+  </div>
+</body>
+</html>

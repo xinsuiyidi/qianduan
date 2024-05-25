@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      width: 320px;
+      height: 100px;
+      background-color: red;
+
+      /* 1. 控制文本首行缩进(空几格) */
+      /* 精确数字: 数字px */
+      text-indent: 50px;
+      /* 几个字: 数字em */
+      text-indent: 2em;     
+      /* &nbsp html 空格 */
+    }
+    .box2 {
+      width: 300px;
+      background-color: pink;
+
+      /* 2. 控制文本的水平对齐方式 */
+      text-align: left;
+      text-align: right;
+      text-align: center;
+    }
+    .box3 {
+      /* 3. 控制文本的修饰属性 */
+      /* 上划线 */
+      text-decoration: overline;
+      /* 下划线 */
+      text-decoration: underline;
+      /* 删除线 */
+      text-decoration: line-through;
+    }
+    a {
+      /* 没有线,常用 */
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">这是一个寂寞的天这是一个寂寞的天这是一个寂寞的天这是一个寂寞的天这是一个寂寞的天这是一个寂寞的天这是一个寂寞的天这是一个寂寞的天</div>
+  <hr>
+  <div class="box2">这是一个寂寞的天</div>
+  <hr>
+  <div class="box3">这是一个寂寞的天</div>
+  <a href="#">我是一个a标签</a>
+</body>
+</html>

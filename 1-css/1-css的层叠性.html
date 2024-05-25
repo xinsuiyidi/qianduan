@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 继承 < 通配符 < 标签 < 类 < id < 行内 < !important */
+    /* 关于复杂选择器的权重计算: */
+    /* 1. 优先对比等级,然后对比数量 */
+    /* 2. 先排除继承,如果有行内和important那么优先级最高 */
+    /* 3. 如果等级高,则权重更高 */
+    /* 4. 如果等级相同,则数量多的权重更高 */
+    /* 5. 万一等级和数量都相同,权重相同后来者居上 */
+
+    /* 记住: 工作项目中,尽可能用优先级比较高的选择器,有id用id,没id用类名 */
+
+    #box2 {
+      color: green;
+    }
+
+    .father .son {
+      color: skyblue;
+    }
+
+    .son {
+      color: pink;
+    }
+
+    div p {
+      color: gold;
+    }
+
+    p {
+      color: blue !important;
+    }
+
+    /* 继承 */
+    .father {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="father" id="box1">
+    <p class="son" id="box2" style="color: deeppink;">
+      猜猜我是什么颜色
+    </p>
+  </div>
+</body>
+</html>

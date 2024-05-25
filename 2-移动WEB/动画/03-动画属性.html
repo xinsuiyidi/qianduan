@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* 2. 调用动画   */
+            /* 动画名称 动画时间 是必须给的属性 */
+            /* animation: 动画名称 动画时间 延迟时间 运动曲线 动画次数 是否逆向播放 最后一帧状态; */
+            /* linear  匀速 */
+            /* infinite 无限次 */
+            /* alternate 逆向播放   逆向播放要求播放次数大于等于2  */
+            /* forwards 保持最后一帧状态 */
+            animation: move 2s 1s linear infinite alternate forwards;
+        }
+
+        .box:hover {
+            /* 动画暂停 */
+            animation-play-state: paused;
+        }
+
+        /* 1. 定义动画 */
+        @keyframes move {
+
+            /* from 动画的开始 */
+            from {
+                transform: translateX(0);
+            }
+
+            /* to 动画的结束 */
+            to {
+                transform: translateX(1000px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
